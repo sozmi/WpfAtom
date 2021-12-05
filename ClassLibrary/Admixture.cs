@@ -42,15 +42,24 @@ namespace ClassLibrary
         /// <summary>
         /// Класс элемента массива
         /// </summary>
-        class Node
+        private class Node
         {
+            /// <summary>
+            /// Конструктор узла
+            /// </summary>
+            /// <param name="value">Значение элемента</param>
             public Node(double value)
             {
                 Value = value;
             }
-
-            public double Value { get; set; }
-            public Node Suitable { get; set; }
+            /// <summary>
+            /// Значение длины волны
+            /// </summary>
+            public double Value;
+            /// <summary>
+            /// Ссылка на сопоставляемый элемент
+            /// </summary>
+            public Node Suitable;
         }
         /// <summary>
         /// Массив длин волн чистого водорода
@@ -67,19 +76,15 @@ namespace ClassLibrary
         /// <returns>Массив значений длин волн примеси</returns>
         static List<double> Compare()
         {
+            //перебор всех элементов со всеми
             foreach (Node h in H)
                 foreach (Node m in mixture)
-                {
                     //если длина волны водорода в пределах погрешности 
                     if (m.Value >= h.Value - 5 && m.Value <= h.Value + 5)
-                    {
                         //если длины волн ещё не использовались
                         if (m.Suitable == null && h.Suitable == null)
-                        {
                             Swap(h, m);
-                        }
-                    }
-                }
+
             return SelectionAdmixture();
         }
         /// <summary>

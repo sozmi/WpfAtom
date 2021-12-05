@@ -14,22 +14,18 @@ namespace WpfAtom.Resource.Controls
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Обработчик нажатия на кнопку нахождения длин волн примеси
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnStart_Clic(object sender, RoutedEventArgs e)
         {
             try
             {
                 panel_result.Visibility = Visibility.Collapsed;
                 txtResult.Text = Admixture.GetWavelenght(txtValue.Text);
-                if (txtResult.Text != "Не удаётся найти длины волн примеси.")
-                {
-                    MainWindow.wavelenght_txt = txtResult.Text;
-                }
-                else
-                {
-                    MainWindow.wavelenght_txt = null;
-                }
-                    
+                MainWindow.wavelenght_txt = txtResult.Text != "Не удаётся найти длины волн примеси." ? txtResult.Text : null;
                 panel_result.Visibility = Visibility.Visible;
             }
             catch (Exception ex)
