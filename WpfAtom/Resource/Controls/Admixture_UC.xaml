@@ -1,0 +1,40 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAtom.Resource.Controls"
+             x:Class="WpfAtom.Resource.Controls.Admixture_UC"
+             mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="600">
+    <DockPanel LastChildFill="False">
+        <DockPanel DockPanel.Dock="Top">
+            <GroupBox Header="Справка" Margin="10">
+                <TextBlock TextWrapping="Wrap"
+                           Width="250">
+                   
+                    <Run Text="1) Погрешность длины волны± 5 нм;"/>
+                    <LineBreak/>
+                    <Run Text="2) Значения вводятся в нм;"/>
+                    <LineBreak/>
+                    <Run Text="3) Пример: 111,12/123,3/ .. /888,45"/>
+                    <LineBreak/>
+                    <Run Text="4) Разделителем целой части от дробной,является запятая"/>
+                </TextBlock>
+            </GroupBox>
+           <StackPanel>
+                <TextBlock TextWrapping="Wrap"
+                           Text="Введите значения длин волн примеси через / БЕЗ пробелов:"/>
+                <TextBox x:Name="txtValue"
+                         TextWrapping="Wrap"
+                         Template="{DynamicResource txt_watermarked}"/>
+                <Button Template="{DynamicResource btn_round_teal}" 
+                        Content="Определить примесь"
+                        Style="{StaticResource teal_btn}" Click="BtnStart_Click">
+                    
+                </Button>
+            </StackPanel>
+        </DockPanel>
+        <DataGrid MinWidth="250" x:Name="dgResult" Margin="10"/>
+    </DockPanel>
+</UserControl>

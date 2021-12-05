@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resource\cancel.png" />
+    <None Remove="Resource\chemistry.png" />
+    <None Remove="Resource\exit.png" />
+    <None Remove="Resource\Images\help.png" />
+    <None Remove="Resource\search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\Images\cancel.png" />
+    <Resource Include="Resource\Images\chemistry.png" />
+    <Resource Include="Resource\Images\exit.png" />
+    <Resource Include="Resource\Images\help.png" />
+    <Resource Include="Resource\Images\search.png" />
+  </ItemGroup>
+
+</Project>

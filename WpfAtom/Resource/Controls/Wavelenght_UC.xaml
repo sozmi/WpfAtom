@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WpfAtom.Resource.Controls.Wavelenght_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAtom.Resource.Controls"
+                 FontFamily="Georgia"
+    FontSize="14"
+             mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="600">
+    <DockPanel LastChildFill="False">
+        <DockPanel DockPanel.Dock="Top">
+            <GroupBox Header="Справка" Margin="10">
+                <TextBlock Width="250" 
+                           TextWrapping="Wrap">
+                    <Run Text="1) Погрешность длины волны± 5 нм;"/><LineBreak/><Run Text="2) Значения вводятся в нм;"/><LineBreak/><Run Text="3) Пример: 111,12/123,3/ .. /888,45"/><LineBreak/><Run Text="4) Разделителем целой части от дробной, является запятая"/>
+                </TextBlock>
+            </GroupBox>
+            <StackPanel Margin="10,15,10,10">
+                <TextBlock Text="Введите определённые по градуировочному графику длины волн водорода с неизвестной примесью через / БЕЗ пробелов:" 
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"/>
+                <TextBox x:Name="txtValue"
+                         TextWrapping="Wrap"
+                         Template="{DynamicResource txt_watermarked}"/>
+                <Button Template="{DynamicResource btn_round_teal}"
+                        Style="{StaticResource teal_btn}"
+                        Content="Найти длины волн примеси" Click="BtnStart_Clic">
+                </Button>
+            </StackPanel>
+        </DockPanel>
+        <StackPanel x:Name="panel_result"
+                    Orientation="Horizontal"
+                    DockPanel.Dock="Top"
+                    Visibility="Collapsed"
+                    Margin="10">
+            <TextBlock Text="Длины волн примеси:" Margin="5,0,10,0"/>
+            <TextBox Style="{DynamicResource txt_usually}" 
+                     x:Name="txtResult"
+                     IsEnabled="False"
+                     TextWrapping="Wrap"
+                     MinWidth="300"></TextBox>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

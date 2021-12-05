@@ -1,0 +1,102 @@
+﻿<Window
+    x:Class="WpfAtom.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfAtom"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="880"
+    Height="450"
+    FontFamily="Georgia"
+    FontSize="14"
+    mc:Ignorable="d">
+    <DockPanel>
+        <!--  Верхняя панель  -->
+        <DockPanel
+            Height="50"
+            Background="Teal"
+            DockPanel.Dock="Top"
+            LastChildFill="False">
+            <!--  Панель названия  -->
+            <DockPanel Width="260" Background="#FF33334C">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    FontStyle="Italic"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Атомная физика" />
+            </DockPanel>
+            <TextBlock
+                x:Name="formName_txt"
+                Margin="50,0,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Foreground="White"
+                Text="ГЛАВНОЕ МЕНЮ" />
+            <Button x:Name="BtnCancel"
+                    Visibility="Collapsed"
+                Click="BtnCancel_Click"
+                DockPanel.Dock="Right"
+                Style="{StaticResource transparent_btn}">
+                <Image Width="32"
+                        Margin="5"
+                        Source="/Resource/Images/cancel.png" />
+            </Button>
+        </DockPanel>
+        <!--  Панель навигации  -->
+        <DockPanel
+            Width="260"
+            Background="#FF242433"
+            DockPanel.Dock="Left"
+            LastChildFill="False">
+            <Button Click="SearchWavelenght_Click"      
+                    DockPanel.Dock="Top"
+                    Style="{StaticResource transparent_btn}">
+                <StackPanel Orientation="Horizontal">
+                    <Image
+                            Width="32"
+                            Margin="5"
+                            Source="/Resource/Images/search.png" />
+                    <TextBlock VerticalAlignment="Center" Text="Нахождение длин волн примеси" />
+                </StackPanel>
+            </Button>
+            <Button Click="DeterminateElem_Click"
+                DockPanel.Dock="Top"
+                Style="{StaticResource transparent_btn}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="32"
+                        Margin="5"
+                        Source="/Resource/Images/chemistry.png" />
+                    <TextBlock VerticalAlignment="Center" Text="Определение примеси" />
+                </StackPanel>
+            </Button>
+            <Button Click="Directory_Click"
+                DockPanel.Dock="Top"
+                Style="{StaticResource transparent_btn}">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="32"
+                        Margin="5"
+                        Source="/Resource/Images/help.png" />
+                <TextBlock VerticalAlignment="Center"
+                           Text="Справка" />
+            </StackPanel>
+            </Button>
+            <Button Click="BtnExit_Click"
+                DockPanel.Dock="Bottom"
+                Style="{StaticResource transparent_btn}">
+                <StackPanel Orientation="Horizontal">
+                    <Image
+                        Width="32"
+                        Margin="5"
+                        Source="/Resource/Images/exit.png" />
+                    <TextBlock VerticalAlignment="Center" Text="Выход" />
+                </StackPanel>
+            </Button>
+        </DockPanel>
+        <ContentControl x:Name="content_panel" DataContext="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </DockPanel>
+</Window>

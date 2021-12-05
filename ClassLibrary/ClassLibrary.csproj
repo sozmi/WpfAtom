@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="data_list.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="data_list.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DeterminateElement.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>
