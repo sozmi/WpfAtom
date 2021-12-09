@@ -11,10 +11,7 @@
     <DockPanel LastChildFill="False">
         <DockPanel DockPanel.Dock="Top">
             <GroupBox Header="Справка" Margin="10">
-                <TextBlock Width="250" 
-                           TextWrapping="Wrap">
-                    <Run Text="1) Погрешность длины волны± 5 нм;"/><LineBreak/><Run Text="2) Значения вводятся в нм;"/><LineBreak/><Run Text="3) Пример: 111,12/123,3/ .. /888,45"/><LineBreak/><Run Text="4) Разделителем целой части от дробной, является запятая"/>
-                </TextBlock>
+                <Image Width="200" Source="/Resource/Images/all_formulas.png"/>
             </GroupBox>
             <StackPanel Margin="10,15,10,10">
                 <TextBlock Text="Введите определённые по градуировочному графику длины волн водорода с неизвестной примесью через / БЕЗ пробелов:" 

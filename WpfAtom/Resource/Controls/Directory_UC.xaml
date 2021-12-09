@@ -7,21 +7,25 @@
              mc:Ignorable="d" 
             FontFamily="Georgia"
             FontSize="14"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch">
-        <TextBlock Text="Справка"/>
-        <TextBlock Text="1)Возможности программы." 
+             Background="White"
+             d:DesignHeight="850" d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel Width="400" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+            <TextBlock 
+                       FontWeight="Bold"
+                       TextDecorations="Underline"
+                       Foreground="#FF242433"><Run Text="1)"/><Run Language="ru-ru" Text="О программе"/><Run Text="."/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="20,0,20,0"><Run Text="Программа предназначена для выполнения лаборатрнной"/><Run Text=" работы"/><Run Text=" "/><Run Text="6"/><Run Text=".1."/><LineBreak/><Run Text="Код программы лежит  в репозитории на "/><Run Text="GitHub: "/><LineBreak/><Run Text="https://github.com/MishaSozontov/WpfAtom"/><LineBreak/><Run Text="В случае "/><Run Text="появления вопросов писать на почту"/><Run Text=": miklhey@mail.ru"/></TextBlock>
+            <TextBlock 
+                       FontWeight="Bold"
+                       TextDecorations="Underline"
+                       Foreground="#FF242433" Text="2) Как пользоваться."/>
+            <TextBlock TextWrapping="Wrap" Margin="20,0,20,0"><Run Text="&#x9;"/><Run Text="Пользователь может"/><Run Text=","/><Run Text=" предварительно построив градуировочный график и получив"/><Run Text=" длины волн загрязненного водорода,"/><Run Text=" нажав на кнопку &quot;"/><Run Text="Нахождение длин волн примеси"/><Run Text="&quot;"/><Run Text=" перейти на одноименную форму. Где нужно ввести длины волн "/><Run Text=" примеси в формате:"/><LineBreak/><Run Text=" "/><Run Text="334,4/378,9/500/465,4/.../600,"/><Run Text=" где"/><LineBreak/><Run Text="р"/><Run Text="азделителем между числами является &quot;"/><Run Text="/"/><Run Text="&quot;"/><Run Text=", а р"/><Run Text="азделителем между целой и дробной частью числа является "/><Run Text="запятая"/><Run Text=". "/><Run/><LineBreak/><Run Text="Затем"/><Run Text=","/><Run Text="нажав на кнопку "/><Run Text="&quot;"/><Run Text="Найти длины волн примеси"/><Run Text="&quot;"/><Run Text=" "/><Run Text="получить длины волн примеси."/><LineBreak/><Run Text="&#x9;"/><Run Text="После этого или  е"/><Run Text="сли"/><Run Text=" пользователю уже были известны дл"/><Run Text="ины волн"/><Run Text=" примеси"/><Run Text=", "/><Run Text="пользователь может нажать на кнопку "/><Run Text="&quot;"/><Run Text="Определение элемента"/><Run Text="&quot;. "/><Run Text="На открывшейся форме пользователю следует ввести "/><Run Text="список длин волн примеси в формате:  "/><Run Text="334,4/378,9/500/465,4/.../600,"/><Run Text=" где"/><LineBreak/><Run Text="р"/><Run Text="азделителем между числами является &quot;"/><Run Text="/"/><Run Text="&quot;"/><Run Text=", а р"/><Run Text="азделителем между целой и дробной частью числа является "/><Run Text="запятая"/><Run Text=". "/><LineBreak/><Run Text="&#x9;"/><Run Text="Для определения элемента необходимо"/><Run Text=" нажать кнопку &quot;Определить примесь&quot;. "/><Run Text=" Элемент"/><Run Language="ru-ru" Text=" в таблице"/><Run Text=" с самым большим количеством совпадений"/><Run Language="ru-ru" Text="(наибольшим числом во втором столбце)"/><Run Text=" будет наиболее вероятным."/><LineBreak/><Run/></TextBlock>
+            <TextBlock Text="3) По каким формулам происходят рассчёты." 
                        FontWeight="Bold"
                        TextDecorations="Underline"
                        Foreground="#FF242433"/>
-
-        <TextBlock Text="2) Как пользоваться." 
-                       FontWeight="Bold"
-                       TextDecorations="Underline"
-                       Foreground="#FF242433"/>
-        <TextBlock Text="3) По каким формулам происходят рассчёты." 
-                       FontWeight="Bold"
-                       TextDecorations="Underline"
-                       Foreground="#FF242433"/>
-    </StackPanel>
+            <Image Width="200" Source="/Resource/Images/all_formulas.png"/>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

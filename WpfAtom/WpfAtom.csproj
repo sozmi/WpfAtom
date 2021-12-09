@@ -10,6 +10,9 @@
     <None Remove="Resource\cancel.png" />
     <None Remove="Resource\chemistry.png" />
     <None Remove="Resource\exit.png" />
+    <None Remove="Resource\Images\all_formulas.png" />
+    <None Remove="Resource\Images\Balmer_formula.png" />
+    <None Remove="Resource\Images\Const_formula.png" />
     <None Remove="Resource\Images\help.png" />
     <None Remove="Resource\search.png" />
   </ItemGroup>
@@ -19,8 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resource\Images\all_formulas.png" />
+    <Resource Include="Resource\Images\Balmer_formula.png" />
     <Resource Include="Resource\Images\cancel.png" />
     <Resource Include="Resource\Images\chemistry.png" />
+    <Resource Include="Resource\Images\Const_formula.png" />
     <Resource Include="Resource\Images\exit.png" />
     <Resource Include="Resource\Images\help.png" />
     <Resource Include="Resource\Images\search.png" />

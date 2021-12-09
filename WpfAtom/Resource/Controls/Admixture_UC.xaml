@@ -16,10 +16,6 @@
                     <Run Text="1) Погрешность длины волны± 5 нм;"/>
                     <LineBreak/>
                     <Run Text="2) Значения вводятся в нм;"/>
-                    <LineBreak/>
-                    <Run Text="3) Пример: 111,12/123,3/ .. /888,45"/>
-                    <LineBreak/>
-                    <Run Text="4) Разделителем целой части от дробной,является запятая"/>
                 </TextBlock>
             </GroupBox>
            <StackPanel>
