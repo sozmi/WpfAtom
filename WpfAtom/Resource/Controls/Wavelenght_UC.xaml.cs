@@ -31,6 +31,7 @@ namespace WpfAtom.Resource.Controls
             catch (Exception ex)
             {
                 _ = MessageBox.Show(ex.Message);
+                return;
             }
         }
     }

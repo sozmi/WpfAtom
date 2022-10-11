@@ -14,7 +14,7 @@
                 <Image Width="200" Source="/Resource/Images/all_formulas.png"/>
             </GroupBox>
             <StackPanel Margin="10,15,10,10">
-                <TextBlock Text="Введите определённые по градуировочному графику длины волн водорода с неизвестной примесью через / БЕЗ пробелов:" 
+                <TextBlock Text="Введите определённые по градуировочному графику длины волн водорода с неизвестной примесью через / БЕЗ пробелов в нм:" 
                            TextWrapping="Wrap"
                            HorizontalAlignment="Left"/>
                 <TextBox x:Name="txtValue"

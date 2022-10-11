@@ -103,7 +103,7 @@
                            FontStyle="Italic"
                            IsHitTestVisible="False"
                            Foreground="#FF686161"
-                           Text="Пример: 643,44/622,04/.../365/345,12" />
+                           Text="643,44/622,04/.../365/345,12" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>

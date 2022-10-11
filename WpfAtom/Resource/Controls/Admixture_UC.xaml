@@ -20,7 +20,7 @@
             </GroupBox>
            <StackPanel>
                 <TextBlock TextWrapping="Wrap"
-                           Text="Введите значения длин волн примеси через / БЕЗ пробелов:"/>
+                           Text="Введите значения длин волн примеси через / БЕЗ пробелов в нм:"/>
                 <TextBox x:Name="txtValue"
                          TextWrapping="Wrap"
                          Template="{DynamicResource txt_watermarked}"/>

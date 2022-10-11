@@ -23,14 +23,23 @@ namespace ClassLibrary
         const double K = 3;
 
         /// <summary>
+        /// Диапазон длин волн в нм
+        /// </summary>
+        const double MIN=365, MAX=800;
+        /// <summary>
         /// Получаем массив истинных значений длин волн
         /// видимой серии спектра излучения атома водорода. 
         /// </summary>
         /// <param name="value">Массив длинн волн "загрязненного" водорода</param>
         /// <returns>массив истинных значений длин волн</returns>
         public static double[] Wavelenght(double[] value)
-        { 
-            return Calculate(value.Min());
+        {
+            var min = value.Min();
+            if(min<MIN || min >= MAX)
+            {
+                throw new Exception($"Значения длин волн должны быть в диапазоне [{MIN};{MAX}]");
+            }
+            return Calculate(min);
         }
         /// <summary>
         /// Вычисление истинных длин волн
@@ -44,7 +53,7 @@ namespace ClassLibrary
             double k = K;
             do
             {
-                wavelenght = (L / (1 - 4 / (k * k))) * Math.Pow(10, 9);
+                wavelenght = L / (1 - 4 / (k * k)) * Math.Pow(10, 9);
                 lst.Add(wavelenght);
                 k++;
             } while (min <= wavelenght);

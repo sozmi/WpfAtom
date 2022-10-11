@@ -15,7 +15,7 @@
                        FontWeight="Bold"
                        TextDecorations="Underline"
                        Foreground="#FF242433"><Run Text="1)"/><Run Language="ru-ru" Text="О программе"/><Run Text="."/></TextBlock>
-            <TextBlock TextWrapping="Wrap" Margin="20,0,20,0"><Run Text="Программа предназначена для выполнения лаборатрнной"/><Run Text=" работы"/><Run Text=" "/><Run Text="6"/><Run Text=".1."/><LineBreak/><Run Text="Код программы лежит  в репозитории на "/><Run Text="GitHub: "/><LineBreak/><Run Text="https://github.com/MishaSozontov/WpfAtom"/><LineBreak/><Run Text="В случае "/><Run Text="появления вопросов писать на почту"/><Run Text=": miklhey@mail.ru"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="20,0,20,0"><Run Language="ru-ru" Text="&#x9;"/><Run Text="Программа предназначена для выполнения лаборатрнной"/><Run Text=" работы"/><Run Text=" "/><Run Text="6"/><Run Text=".1."/><LineBreak/><Run Text="Код программы лежит  в репозитории на "/><Run Text="GitHub: "/><LineBreak/><Run Text="https://github.com/sozmi/WpfAtom"/><LineBreak/><Run Text="В случае "/><Run Text="появления вопросов писать на почту"/><Run Text=": miklhey@mail.ru"/></TextBlock>
             <TextBlock 
                        FontWeight="Bold"
                        TextDecorations="Underline"
